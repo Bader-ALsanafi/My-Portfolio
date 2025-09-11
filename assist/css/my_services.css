@@ -1,0 +1,185 @@
+@import url('https://fonts.googleapis.com/css2?family=Oleo+Script:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root {
+    --main-color: #1f242d;
+    --second-color: #323946;
+    --text-color: #ffffff;
+    --bg-color: #1fc7ed;
+
+}
+
+
+body {
+    background-color: #1c2125;
+    color: aliceblue;
+    /* background-image: url("../imeges/background.jpeg");
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    filter: blur(); */
+}
+
+
+.logo {
+    position: relative;
+    font-size: 25px;
+    font-weight: 600;
+    text-decoration: none;
+    color: aliceblue;
+    padding: 0px 0px 0px 20px;
+}
+.logo span{
+    color: var(--bg-color);
+      font-size: 30px;
+}
+
+.logo::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #526D82;
+    animation: showRight 1s ease forwards;
+    animation-delay: .4s;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 40px 20px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: aliceblue;
+    z-index: 100;
+    background: transparent;
+
+
+}
+
+nav a {
+    color: aliceblue;
+    text-decoration: none;
+    font-size: 17px;
+    font-weight: 500;
+    margin-left: 35px;
+}
+
+nav a:hover {
+    color: darkgray;
+    transition: .3s;
+}
+
+.services {
+    background: var(--second-color);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 10%;
+}
+
+span {
+    color: var(--bg-color);
+}
+
+.title {
+    text-align: center;
+    font-size: 40px;
+    font-weight: 700;
+    margin-bottom: 40px;
+}
+
+
+
+.services-container {
+    display: flex;
+    justify-content: center;
+    /* <-- يخلي الكروت في النص */
+    flex-wrap: wrap;
+    gap: 30px;
+    /* مسافة بين الكروت */
+}
+
+.card {
+    background-color: var(--second-color);
+    width: 330px;
+    box-shadow: 0 5px 25px rgba(1, 1, 1, 15%);
+    border-radius: 10px;
+    padding: 25px;
+    margin: 15px;
+    margin-top: 99px;
+
+
+}
+
+.card:hover {
+    transform: scale(1.1);
+    transition: .7s;
+}
+
+.icon-card {
+    color: var(--bg-color);
+    font-size: 80px;
+    text-align: center;
+}
+
+.info {
+    text-align: center;
+}
+
+.info h3 {
+    color: var(--bg-color);
+    font-size: 20px;
+    font-weight: 700;
+    margin: 10px;
+
+
+}
+
+.info p {
+    color: white;
+}
+
+@keyframes showRight {
+    100% {
+        width: 0;
+    }
+}
+
+footer {
+
+    background: var(--main-color);
+    text-align: center;
+    padding: 7px 0;
+    color: white;
+    font-size: 14px;
+
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    color: wheat;
+}
+
+.text-light.mx-2 {
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+    color: #ffffff;
+}
+

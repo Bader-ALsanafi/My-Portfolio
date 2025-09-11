@@ -1,0 +1,248 @@
+/* ========== RESET STYLES ========== */
+@import url('https://fonts.googleapis.com/css2?family=Oleo+Script:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root {
+    --main-color: #1f242d;
+    --second-color: #323946;
+    --text-color: #ffffff;
+    --bg-color: #1fc7ed;
+}
+
+body {
+    background-color: #1c2125;
+    color: var(--text-color);
+}
+.hidden-navbar {
+    display: none !important;
+}
+.logo {
+    position: relative;
+    font-size: 25px;
+    font-weight: 600;
+    text-decoration: none;
+    color: aliceblue;
+    padding: 0px 0px 0px 20px;
+     display: flex;
+    align-items: center;
+}
+
+.navbar-brand span {
+    color: var(--bg-color);
+    font-size: 30px;
+    font-family: 'Oleo Script', cursive;
+    font-weight: bold;
+}
+.logo i{
+    display:none;
+}
+.logo span{
+    color: var(--bg-color);
+  font-size: 30px;
+}
+
+.logo::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #526D82;
+    animation: showRight 1s ease forwards;
+    animation-delay: .4s;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 40px 20px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: aliceblue;
+    z-index: 100;
+    background: transparent;
+
+
+}
+
+nav a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-size: 17px;
+    font-weight: 500;
+    margin-left: 35px;
+    transition: .3s;
+}
+
+nav a:hover {
+    color: darkgray;
+}
+
+/* ========== SECTION TITLE ========== */
+.title {
+    font-size: 3rem;
+    text-align: center;
+    margin: 5rem 0;
+}
+
+/* ========== TIMELINE ========== */
+.timeline {
+    max-width: 12 00px;
+    margin: auto;
+    position: relative;
+    padding: 50px 0;
+}
+
+.timeline::before {
+    content: "";
+    position: absolute;
+    width: 5px;
+    height: 100%;
+    background-color: var(--main-color);
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.timeline-item {
+    width: 100%;
+    position: relative;
+    margin-bottom: 50px;
+}
+
+.timeline-item:last-child {
+    margin-bottom: 0;
+}
+
+/* العناصر الفردية (يسار) */
+.timeline-item:nth-child(odd) {
+    padding-right: calc(50% + 30px);
+    text-align: right;
+}
+
+/* العناصر الزوجية (يمين) */
+.timeline-item:nth-child(even) {
+    padding-left: calc(50% + 30px);
+    text-align: left;
+}
+h3{
+    font-size: 20px;
+}
+
+/* النقاط */
+.timeline-dot {
+    height: 20px;
+    width: 20px;
+    background-color: var(--bg-color);
+    border-radius: 50%;
+    position: absolute;
+    left: 50%;
+    top: 10px;
+    transform: translateX(-50%);
+    box-shadow: 0 0 20px var(--bg-color), 0 0 40px var(--bg-color);
+}
+
+/* التاريخ */
+.timeline-date {
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: var(--bg-color);
+}
+
+/* الصناديق */
+.timeline-content {
+    background: var(--second-color);
+    padding: 20px;
+    border-radius: 10px;
+    border: 2px solid var(--bg-color);
+    box-shadow: 0 0 10px var(--bg-color);
+    display: inline-block;
+    max-width: 450px;
+}
+footer{
+margin-top: 70px;
+    background: var(--second-color);
+    text-align: center;
+    padding: 7px 0;
+    color: white;
+    font-size: 14px;
+
+}
+@keyframes showRight {
+    100% {
+        width: 0;
+    }
+}
+@media screen and (max-width: 750px) {
+
+    nav{
+        display: none;
+    }
+    .logo i{
+        display: block;
+        cursor: pointer;
+        margin-bottom: 10px;
+    }
+    .timeline-item:nth-child(odd){
+        margin-left: 20px;
+    }
+    .timeline-item:nth-child(even){
+        margin-right: 10px;
+    }
+    
+    .hidden-navbar {
+        display: flex !important;
+    }
+    .timeline-item:nth-child(odd) {
+    padding-right: calc(50% + 40px);
+    text-align: right;
+}
+h3{
+    font-size: 15px;
+}
+p{
+    font-size: 13px;
+}
+.timeline-content {
+    padding: 10px;
+    width: 300px;
+}
+
+}
+
+@media screen and (max-width: 700px) {
+    .timeline-dot{
+     height: 20px;
+    width: 20px;
+    background-color: var(--bg-color);
+    border-radius: 50%;
+    position: absolute;
+    left: 50%;
+    top: 10px;
+    transform: translateX(-50%);
+    box-shadow: 0 0 20px var(--bg-color), 0 0 40px var(--bg-color);
+
+    }
+ 
+}
+
+@media screen and (max-width: 670px) {
+    .timeline-item:nth-child(odd) {
+                margin-left: 1px;
+}
+.timeline-item:nth-child(even) {
+      padding-left: calc(50% + 20px);
+    text-align: left;
+}
+}
+
+

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="assist/css/login.css">
+
+</head>
+<body>
+    <header>
+         <div class="logo">
+        <i class="fa-solid fa-bars"></i>
+           <h3 class="logo"><span>B</span>ader</h3>
+        </div>
+        <div class="end-head">
+          <a href="index.html"><span>Go</span> Back</a>
+        </div>
+    </header>
+<form action="#" method="post" onsubmit="return false;"> 
+    <h1>creat an account </h1>
+
+   
+    <input type="text" name="name" required placeholder="Enter a valid user name" maxlength="8" minlength="4" pattern="^[^\u0600-\u06FF]+$" title="Name must not contain Arabic letters."><br>
+              <!-- <input type="text"  required placeholder =" Enter  your last name" ><br> -->
+               
+               <input type="email" required placeholder =" Enter your email" ><br>
+
+            <input type="password" name="password" required placeholder =" Enter password" minlength="9" maxlength="32" pattern=".{9,}" title="Password must be at least 9 characters."><br>
+
+
+<button type="submit">  creat account </button>
+
+</form>    
+    
+</body>
+</html>
